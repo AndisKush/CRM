@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'build')));
+
 // Lista de pastas e arquivos que você deseja incluir no cache
 const staticFolders = ['assets', 'favicon', 'produtos', 'logo.png'];
 
